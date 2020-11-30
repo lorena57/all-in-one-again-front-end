@@ -7,7 +7,7 @@ class Notes extends Component {
         this.props.fetchNotes();
     }
     render() {
-        const noteItems = this.state.notes.map(note => (
+        const noteItems = this.props.notes.map(note => (
             <div key={note.id}>
                 <h3>Title: {note.title}</h3>
                 <h3>Note: {note.content}</h3>
@@ -22,4 +22,8 @@ class Notes extends Component {
     }
 }
 
-export default connect(null, { fetchNotes })(Notes);
+const mapStateToProps = state => ({
+    notes: state.notes.notes
+});
+
+export default connect(mapStateToProps, { fetchNotes })(Notes);
