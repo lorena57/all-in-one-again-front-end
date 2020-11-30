@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class NoteForm extends Component {
+class NoteForm extends Component {
     render() {
         return (
             <div>
@@ -9,3 +9,5 @@ export default class NoteForm extends Component {
         )
     }
 }
+
+export default NoteForm;
