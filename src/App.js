@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Notes from "./components/Notes";
 import NoteForm from "./components/NoteForm";
 import { Provider } from "react-redux";
-import store from './store';
+import store from './store'
 
 
 
