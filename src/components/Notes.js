@@ -6,6 +6,13 @@ class Notes extends Component {
     componentWillMount(){
         this.props.fetchNotes();
     }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.newNote) {
+            this.props.notes.unshift(nextProps.newNote);
+        }
+    }
+
     render() {
         const noteItems = this.props.notes.map(note => (
             <div key={note.id}>
@@ -22,8 +29,10 @@ class Notes extends Component {
     }
 }
 
+//mapStateToProps gets the state and maps the properties to the component
 const mapStateToProps = state => ({
-    notes: state.notes.notes
+    notes: state.notes.notes,
+    newNote: state.notes.note
 });
 
 export default connect(mapStateToProps, { fetchNotes })(Notes);

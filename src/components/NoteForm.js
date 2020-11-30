@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from "react-redux";
+import { createNote } from '../actions/postActions'
 
 class NoteForm extends Component {
     constructor(props) {
@@ -23,15 +25,7 @@ class NoteForm extends Component {
             content: this.state.content
         };
 
-        fetch('http://localhost:3000/api/v1/notes', {
-            method: 'POST',
-            headers: {
-                'content-type' : 'application/json'
-            },
-            body: JSON.stringify(newNote)
-        })
-        .then(res => res.json())
-        .then(data => console.log(data))
+        this.props.createNote(newNote)
     }
 
     render() {
@@ -57,4 +51,4 @@ class NoteForm extends Component {
     }
 }
 
-export default NoteForm;
+export default connect(null, { createNote}) (NoteForm);

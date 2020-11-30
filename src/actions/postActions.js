@@ -9,3 +9,19 @@ export const fetchNotes = () => dispatch => {
         }));
     
 }
+
+export const createNote = (noteData) => dispatch => {
+    fetch('http://localhost:3000/api/v1/notes', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(noteData)
+    })
+        .then(res => res.json())
+        .then(note => dispatch({
+            type: NEW_NOTES,
+            payload: note
+        }))
+
+};
