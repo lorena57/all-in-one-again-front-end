@@ -2,8 +2,6 @@ import { FETCH_CONTACTS, NEW_CONTACT } from '../actions/types';
 
 
 const initialState = {
-    notes: [],
-    note: {},
     contacts: [],
     contact: {}
 }
