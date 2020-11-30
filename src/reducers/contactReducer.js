@@ -1,4 +1,5 @@
-import { FETCH_NOTES, NEW_NOTES } from '../actions/types';
+import { FETCH_CONTACTS, NEW_CONTACT } from '../actions/types';
+
 
 const initialState = {
     notes: [],
@@ -7,14 +8,14 @@ const initialState = {
     contact: {}
 }
 
-const noteReducer = (state = initialState, action) => {
-    switch(action.type) {
-        case FETCH_NOTES:
+const contactReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case FETCH_CONTACTS:
             return {
                 ...state,
                 notes: action.payload
             };
-        case NEW_NOTES:
+        case NEW_CONTACT:
             return {
                 ...state,
                 note: action.payload
@@ -24,4 +25,4 @@ const noteReducer = (state = initialState, action) => {
     }
 }
 
-export default noteReducer;
+export default contactReducer;
