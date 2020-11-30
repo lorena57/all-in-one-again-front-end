@@ -1,7 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchNotes } from "../actions/postActions";
 
 class Notes extends Component {
- 
+    componentWillMount(){
+        this.props.fetchNotes();
+    }
     render() {
         const noteItems = this.state.notes.map(note => (
             <div key={note.id}>
@@ -18,4 +22,4 @@ class Notes extends Component {
     }
 }
 
-export default Notes
+export default connect(null, { fetchNotes })(Notes);

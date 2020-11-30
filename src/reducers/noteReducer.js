@@ -5,9 +5,10 @@ const initialState = {
     note: {}
 }
 
-const noteReducer = (state = initialState) {
+const noteReducer = (state = initialState, action) => {
     switch(action.type) {
         case FETCH_NOTES:
+            console.log("WHERE ARE YOU?????");
             return {
                 ...state,
                 notes: action.payload
