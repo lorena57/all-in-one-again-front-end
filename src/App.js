@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import Notes from "./components/Notes";
 import NoteForm from "./components/NoteForm";
 import { Provider } from "react-redux";
-import { createStore , applyMiddleware } from "redux";
+import store from './store';
 
-const store = createStore(() => [], {}, applyMiddleware());
+
 
 class App extends Component {
   render(){
