@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { connect } from "react-redux";
+import { createContact } from "../actions/contactActions";
+
 
  class ContactForm extends Component {
     constructor(props) {
@@ -28,15 +31,7 @@ import React, { Component } from 'react'
         phone_number: this.state.phone_number
         
         }
-        fetch('http://localhost:3000/api/v1/contacts', {
-            method: 'POST',
-            headers: {
-                'content-type' : 'application/json'
-            },
-            body: JSON.stringify(contact)
-        })
-        .then(res => res.json()
-        .then(data => console.log(data)))
+        this.props.createContact(contact)
     }
 
     render() {
@@ -76,4 +71,4 @@ import React, { Component } from 'react'
     }
 }
 
-export default ContactForm;
+export default connect(null, { createContact })(ContactForm) ;

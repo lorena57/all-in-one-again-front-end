@@ -8,6 +8,12 @@ import { fetchContacts } from "../actions/contactActions";
         this.props.fetchContacts();
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.newContact) {
+            this.props.contacts.unshift(nextProps.newContact)
+        }
+    }
+
     render() {
         const contactItems = this.props.contacts.map(contact => (
             <div key={contact.id}>
@@ -27,7 +33,8 @@ import { fetchContacts } from "../actions/contactActions";
 }
 
 const mapStateToProps = state => ({
-    contacts: state.contacts.contacts
+    contacts: state.contacts.contacts,
+    newContact: state.contacts.contact
 });
 
 export default connect(mapStateToProps, { fetchContacts })(Contacts);
