@@ -1,4 +1,4 @@
-import { FETCH_NOTES, NEW_NOTES, FETCH_CONTACTS } from './types';
+import { FETCH_NOTES, NEW_NOTES } from './types';
 
 export const fetchNotes = () => dispatch => {
         fetch('http://localhost:3000/api/v1/notes')
@@ -24,11 +24,3 @@ export const createNote = (noteData) => dispatch => {
         }))
 };
 
-export const fetchContacts = () => dispatch => {
-    fetch('http://localhost:3000/api/v1/notes')
-        .then(res => res.json())
-        .then(notes => dispatch({
-            type: FETCH_CONTACTS,
-            payload: contacts
-        }));
-}

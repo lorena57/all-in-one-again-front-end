@@ -3,8 +3,6 @@ import { FETCH_NOTES, NEW_NOTES } from '../actions/types';
 const initialState = {
     notes: [],
     note: {},
-    contacts: [],
-    contact: {}
 }
 
 const noteReducer = (state = initialState, action) => {

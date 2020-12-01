@@ -1,4 +1,4 @@
-import { FETCH_CONTACTS, NEW_CONTACT } from '../actions/types';
+import { FETCH_CONTACTS, NEW_CONTACT, SET_USER } from '../actions/types';
 
 
 const initialState = {
@@ -18,6 +18,12 @@ const contactReducer = (state = initialState, action) => {
                 ...state,
                 note: action.payload
             };
+        case SET_USER:
+            return {
+                ...state,
+                userId: action.payload
+            };
+
         default:
             return state;
     }
