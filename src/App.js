@@ -6,11 +6,16 @@ import store from './store'
 
 
 
+
 class App extends Component {
   render(){
   return (
     <Provider store={store}>
       <div className="App">
+
+
+<hr/>
+<hr/>
         <NoteForm/>
         <hr/>
         <Notes/>

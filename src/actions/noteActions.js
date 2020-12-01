@@ -1,6 +1,7 @@
 import { FETCH_NOTES, NEW_NOTES } from './types';
 
 export const fetchNotes = () => dispatch => {
+    
         fetch('http://localhost:3000/api/v1/notes')
         .then(res => res.json())
         .then(notes => dispatch({
@@ -10,6 +11,7 @@ export const fetchNotes = () => dispatch => {
 }
 
 export const createNote = (noteData) => dispatch => {
+    console.log("Where are you again")
     fetch('http://localhost:3000/api/v1/notes', {
         method: 'POST',
         headers: {
