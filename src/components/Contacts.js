@@ -1,18 +1,6 @@
 import React, { Component } from 'react'
 
  class Contacts extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            contacts: []
-        }
-    }
-
-    componentWillMount() {
-        fetch('http://localhost:3000/api/v1/contacts')
-        .then(res => res.json())
-        .then(data => this.setState({contacts: data}));
-    }
 
     render() {
         const contactItems = this.state.contacts.map(contact => (
