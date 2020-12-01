@@ -10,7 +10,7 @@ export const fetchNotes = () => dispatch => {
 }
 
 export const createNote = (noteData) => dispatch => {
-    console.log("Where are you again")
+    
     fetch('http://localhost:3000/api/v1/notes', {
         method: 'POST',
         headers: {
