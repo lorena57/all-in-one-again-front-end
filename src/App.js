@@ -1,12 +1,18 @@
 import React, { Component } from "react";
 import './App.css';
+
+// import { Route } from 'react-router-dom'
+
+
 // import Notes from "./components/Notes";
 // import NoteForm from "./components/NoteForm";
-import { Provider } from "react-redux";
-import store from './store'
 
-// import Contacts from "./components/Contacts";
-// import ContactForm from "./components/ContactForm";
+
+import Nav from './components/Nav';
+
+
+import Contacts from "./components/Contacts";
+import ContactForm from "./components/ContactForm";
 
 import IntroPage from "./containers/IntroPage";
 
@@ -15,10 +21,22 @@ import IntroPage from "./containers/IntroPage";
 class App extends Component {
   render(){
   return (
-    <Provider store={store}>
+   
       <div className="App">
 
+        {/* <Switch>
+
+        </Switch> */}
+
+
+        <Nav />
+
+      <ContactForm />
+        <Contacts />
+
         <IntroPage/>
+
+  
 
 
           {/* <hr/>
@@ -30,8 +48,9 @@ class App extends Component {
           <NoteForm/>
           <hr/>
           <Notes/> */}
+
       </div>
-    </Provider>
+  
   );
 }
 }
