@@ -11,11 +11,34 @@ import React, { Component } from 'react'
         };
 
         this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
     }
 
     onChange(e) {
         this.setState({[e.target.name]: e.target.value});
     }
+
+    onSubmit(e) {
+        e.preventDefault();
+
+        const contact = {
+        first_name: this.state.first_name,
+        last_name: this.state.last_name,
+        email: this.state.email,
+        number: this.state.number
+        }
+        fetch('http://localhost:3000/api/v1/contacts', {
+            method: 'POST',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(contact)
+        })
+        .then(res => res.json()
+        .then(data => console.log(data)))
+    }
+
+
 
 
 
@@ -23,7 +46,7 @@ import React, { Component } from 'react'
         return (
             <div>
                 <h1>Add Contact</h1>
-                <form>
+                <form onSubmit={this.onSubmit}>
                     <div>
                         <label>First Name:</label><br/>
                         <input type="text" onChange={this.onChange} name='first_name' value={this.state.first_name} />
