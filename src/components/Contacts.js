@@ -25,7 +25,7 @@ import { fetchContacts, setUser} from "../actions/contactActions";
 
         if (contacts) {
             renderList = contacts.map(list => {
-                return (<a onClick={() => this.handleOnClick(list.id)} key={list.id}>{list.first_name}</a>)
+                return (<a onClick={() => this.handleOnClick(list.id)} key={list.id}>{list.first_name}<br/></a>)
             })
         }
 
