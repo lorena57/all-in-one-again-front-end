@@ -4,6 +4,8 @@ import NoteForm from "./components/NoteForm";
 import { Provider } from "react-redux";
 import store from './store'
 
+import Contacts from "./components/Contacts";
+
 
 
 
@@ -16,6 +18,10 @@ class App extends Component {
 
 <hr/>
 <hr/>
+
+<Contacts/>
+        <hr />
+        <hr />
         <NoteForm/>
         <hr/>
         <Notes/>
