@@ -24,8 +24,9 @@ import React, { Component } from 'react'
         const contact = {
         first_name: this.state.first_name,
         last_name: this.state.last_name,
-        email: this.state.email,
-        number: this.state.number
+        email_address: this.state.email_address,
+        phone_number: this.state.phone_number
+        
         }
         fetch('http://localhost:3000/api/v1/contacts', {
             method: 'POST',
@@ -37,10 +38,6 @@ import React, { Component } from 'react'
         .then(res => res.json()
         .then(data => console.log(data)))
     }
-
-
-
-
 
     render() {
         return (
@@ -60,12 +57,12 @@ import React, { Component } from 'react'
                     <br />
                     <div>
                         <label>Email Address:</label><br />
-                        <input type="text" onChange={this.onChange} name='email' value={this.state.email} />
+                        <input type="text" onChange={this.onChange} name='email_address' value={this.state.email_address} />
                     </div>
                     <br />
                     <div>
                         <label>Contact Number:</label><br />
-                        <input type="text" onChange={this.onChange} name='number' value={this.state.number} />
+                        <input type="text" onChange={this.onChange} name='phone_number' value={this.state.phone_number} />
                         <br />
                     </div>
                     <br />
