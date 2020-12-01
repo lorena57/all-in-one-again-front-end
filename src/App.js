@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import store from './store'
 
 import Contacts from "./components/Contacts";
+import ContactForm from "./components/ContactForm";
 
 
 
@@ -18,7 +19,7 @@ class App extends Component {
 
 <hr/>
 <hr/>
-
+<ContactForm/>
 <Contacts/>
         <hr />
         <hr />
