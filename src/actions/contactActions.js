@@ -1,4 +1,4 @@
-import { FETCH_CONTACTS, NEW_CONTACTS } from "./types";
+import { FETCH_CONTACTS, NEW_CONTACTS, SET_USER } from "./types";
 
 export const fetchContacts = () => dispatch => {
     fetch('http://localhost:3000/api/v1/contacts')
@@ -25,3 +25,10 @@ export const createContact = (contactData) => dispatch => {
             })
             );
 };
+
+export const setUser = userId => {
+    return {
+        type: SET_USER,
+        payload: userId
+    }
+}

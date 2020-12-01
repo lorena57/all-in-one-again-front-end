@@ -23,7 +23,6 @@ import { createContact } from "../actions/contactActions";
 
     onSubmit(e) {
         e.preventDefault();
-
         const contact = {
         first_name: this.state.first_name,
         last_name: this.state.last_name,
@@ -35,6 +34,7 @@ import { createContact } from "../actions/contactActions";
     }
 
     render() {
+
         return (
             <div>
                 <h1>Add Contact</h1>
