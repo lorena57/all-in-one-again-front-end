@@ -12,11 +12,11 @@ import { fetchContacts, setUser} from "../actions/contactActions";
          this.props.setUser(userId);
      }
 
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.newContact) {
-            this.props.contacts.unshift(nextProps.newContact)
-        }
-    }
+    // componentWillReceiveProps(nextProps) {
+    //     if (nextProps.newContact) {
+    //         this.props.contacts.unshift(nextProps.newContact)
+    //     }
+    // }
 
     render() {
 
@@ -32,27 +32,40 @@ import { fetchContacts, setUser} from "../actions/contactActions";
         const currentUser = this.props.currentUser;
         let userDetails = 'No User Selected';
         if (currentUser) {
-            userDetails = `Hi, my name is${currentUser.first_name}`;
+            userDetails = `Hi, my name is ${currentUser.first_name}`;
         }
 
-        // const contactItems = this.props.contacts.map(contact => (
-        //     <div key={contact.id}>
-        //         <h3>First Name: {contact.first_name}</h3>
-        //         <h3>Last Name: {contact.last_name}</h3>
-        //         <h3>Email Address: {contact.email_address}</h3>
-        //         <h3>Contact Number: {contact.phone_number}</h3>
+        const contactItems = this.props.contacts.map(contact => (
+            <div key={contact.id}>
+                <h3>First Name: {contact.first_name}</h3>
+                <h3>Last Name: {contact.last_name}</h3>
+                <h3>Email Address: {contact.email_address}</h3>
+                <h3>Contact Number: {contact.phone_number}</h3>
                 
-        //         <br/>
+                <br/>
                 
-        //     </div>
-        // ))
+            </div>
+        ))
         return (
+            
             <div>
-                <div>{userDetails}</div>
-                <div>{renderList}</div>
+
+
+                <div >
+                    {renderList}
+                </div>
+
+                <div>
+                    <div>
+                        {userDetails}
+                    </div>
+                </div>
+
+
+                
                 
                 <h1>Contact</h1>
-                {/* {contactItems} */}
+                {contactItems}
             </div>
         )
     }
