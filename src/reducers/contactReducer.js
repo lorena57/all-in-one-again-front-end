@@ -5,7 +5,7 @@ const initialState = {
     contact: {}
 }
 
-const noteReducer = (state = initialState, action) => {
+const contactReducer = (state = initialState, action) => {
     switch (action.type) {
         case FETCH_CONTACTS:
             return {
@@ -22,5 +22,5 @@ const noteReducer = (state = initialState, action) => {
     }
 }
 
-export default noteReducer;
+export default contactReducer;
 

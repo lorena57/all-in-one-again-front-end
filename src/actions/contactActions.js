@@ -1,4 +1,4 @@
-import { FETCH_CONTACTS, NEW_CONTACTS } from "./types";
+import { FETCH_CONTACTS } from "./types";
 
 export const fetchNotes = () => dispatch => {
     fetch('http://localhost:3000/api/v1/notes')

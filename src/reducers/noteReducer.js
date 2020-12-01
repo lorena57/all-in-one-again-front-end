@@ -6,7 +6,7 @@ const initialState = {
 }
 
 const noteReducer = (state = initialState, action) => {
-    switch(action.type) {
+    switch (action.type) {
         case FETCH_NOTES:
             return {
                 ...state,

@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
+import { connect } from "react-redux";
+import { fetchNotes } from "../actions/contactActions";
 
  class Contacts extends Component {
 
+    componentWillMount() {
+        this.props.fetchNotes();
+    }
+
     render() {
-        const contactItems = this.state.contacts.map(contact => (
+        const contactItems = this.props.contacts.map(contact => (
             <div key={contact.id}>
                 <h3>First Name: {contact.first_name}</h3>
                 <h3>Last Name: {contact.last_name}</h3>
@@ -20,4 +26,8 @@ import React, { Component } from 'react'
     }
 }
 
-export default Contacts;
+const mapStateToProps = state => ({
+    contacts: state.contacts.contacts
+});
+
+export default connect(mapStateToProps, { fetchNotes })(Contacts);
