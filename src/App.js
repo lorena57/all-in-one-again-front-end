@@ -1,67 +1,37 @@
 import React, { Component } from 'react';
-// import { Route, Switch } from 'react-router-dom';
 
-
-import './App.css';
-
-
-
-
-
-import Notes from "./components/Notes";
-import NoteForm from "./components/NoteForm";
-
-
-// import Nav from './components/Nav';
-// import Contacts from "./components/Contacts";
+import Nav from './components/Nav';
+// import IntroSection from './components/IntroSection';
 // import ContactForm from "./components/ContactForm";
-// import IntroPage from "./containers/IntroPage";
+import Contacts from "./components/Contacts";
+import CardSection from './components/CardSection'
+import IntroPage from './containers/IntroPage'
+
+import { Route, Switch } from 'react-router-dom'
 
 
 
 class App extends Component {
   render() {
     return (
-   
-      <div className="App">
-
-        <NoteForm />
-        <Notes />
-
-        {/* <Contacts />
-        <ContactForm /> */}
-      {/* <Switch> */}
-        {/* <Route exact path='/' component={IntroPage} /> */}
-        {/* <Route path='/grocery' component={GroceryForm} /> */}
-        {/* <Route path='/note' component={NotePage} /> */}
-        {/* <Route path='/contact' component={Contacts} />
-      </Switch>
-
-
+      <div>
         <Nav />
+        {/* <IntroPage /> */}
+        {/* <CardSection /> */}
 
-      <ContactForm />
-        // <Contacts />
+    
+        
+        {/* <ContactForm />
+        <Contacts /> */}
 
-        <IntroPage/> */}
-
-  
-
-
-          {/* <hr/>
-          <hr/>
-          <ContactForm/>
-          <Contacts/>
-          <hr />
-          <hr />
-          <NoteForm/>
-          <hr/>
-          <Notes/> */}
+        <Switch>
+          <Route exact path='/' component={IntroPage} />
+          <Route path='/contacts' component={Contacts} />
+        </Switch>
 
       </div>
-  
-  );
-}
+    )
+  }
 }
 
 export default App;
