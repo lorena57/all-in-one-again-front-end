@@ -25,7 +25,7 @@ import { fetchContacts, setUser} from "../actions/contactActions";
 
         if (contacts) {
             renderList = contacts.map(list => {
-                return (<a onClick={() => this.handleOnClick(list.id)} key={list.id}>{list.first_name}<br/></a>)
+                return (<a onClick={() => this.handleOnClick(list.id)} key={list.id}><br/>{list.first_name}<br/></a>)
             })
         }
 
@@ -49,10 +49,9 @@ import { fetchContacts, setUser} from "../actions/contactActions";
         return (
             
             <div>
-
-
                 <div >
                     {renderList}
+                    <br/>
                 </div>
 
                 <div>
@@ -61,11 +60,12 @@ import { fetchContacts, setUser} from "../actions/contactActions";
                     </div>
                 </div>
 
-
+                <div>  
+                    <h1>Contact</h1>
+                    <div>{contactItems}</div>
                 
-                
-                <h1>Contact</h1>
-                {contactItems}
+                </div>
+              
             </div>
         )
     }

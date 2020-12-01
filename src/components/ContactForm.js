@@ -28,13 +28,11 @@ import { createContact } from "../actions/contactActions";
         last_name: this.state.last_name,
         email_address: this.state.email_address,
         phone_number: this.state.phone_number
-        
         }
         this.props.createContact(contact)
     }
 
     render() {
-
         return (
             <div>
                 <h1>Add Contact</h1>
@@ -64,7 +62,6 @@ import { createContact } from "../actions/contactActions";
                     <div>
                         <button type='submit'>Add Contact</button>
                     </div>
-                    
                 </form>
             </div>
         )
