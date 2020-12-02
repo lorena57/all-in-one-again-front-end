@@ -2,30 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-
-// class Nav extends Component {
-//     constructor(props) {
-//         super(props);
-//     }
-
-//     componentWillMount() {
-//         this.props.notifyPathname(window.location.pathname);
-//     }
-
-//     render() {
-//         return (
-//             <div>
-//                 {
-//                     this.props.pathname === '/' ?
-//                     <Link to="/create">Add new</Link>: ''
-//                 }
-//             </div>
-//         )
-//     }
-// }
-
-// export default Nav;
-
 const Nav = () => {
     return (
         <StyledNav>

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from "react-redux";
 import { createContact } from "../actions/contactActions";
 
-
  class ContactForm extends Component {
     constructor(props) {
         super(props)

@@ -32,10 +32,6 @@ const CardSection = () => {
     const classes = useStyles();
 
     return (
-
-        
-
-
         <div className={classes.root} id='card-selection'>
 
             <div>
