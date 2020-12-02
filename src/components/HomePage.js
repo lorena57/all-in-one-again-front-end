@@ -1,16 +1,16 @@
 
 import React from 'react';
 //Page Components
-import IntroSection from './IntroSection';
+// import IntroSection from './IntroSection';
 import CardSection from './CardSection';
 
-const IntroPage = () => {
+const HomePage = () => {
     return (
         <>
-            <IntroSection />
+            {/* <IntroSection /> */}
             <CardSection />
         </>
     );
 };
 
-export default IntroPage;
+export default HomePage;

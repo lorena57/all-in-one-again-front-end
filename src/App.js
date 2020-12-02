@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Nav from './components/Nav';
-import Contacts from "./components/Contacts";
+import Contacts from "./containers/Contacts";
 import ContactForm from "./components/ContactForm";
 
-import IntroPage from './components/IntroPage';
+import IntroPage from './components/HomePage';
 import { Route, Switch } from 'react-router-dom';
 
 
@@ -13,7 +13,6 @@ class App extends Component {
     return (
       <div>
         <Nav />
-
         <Switch>
           <Route exact path='/' component={IntroPage} />
           <Route path='/contacts/new' component={ContactForm} />

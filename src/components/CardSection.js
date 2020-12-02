@@ -7,6 +7,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
 
+import openBook from '../img/open-book.jpg';
+
 //Icons
 import LocalGroceryStoreIcon from '@material-ui/icons/LocalGroceryStore';
 import NoteIcon from '@material-ui/icons/Note';
@@ -31,8 +33,25 @@ const CardSection = () => {
 
     return (
 
+        
+
 
         <div className={classes.root} id='card-selection'>
+
+            <div>
+                <div>
+                    <h2>Welcome to</h2>
+                </div>
+                <div>
+                    <h2>All In</h2>
+                </div>
+                <div>
+                    <h2>One</h2>
+                </div>
+            </div>
+            <div>
+                <img src={openBook} alt="" />
+            </div>
 
 <Link to="/contacts/new">
             <Card className={classes.root}>
