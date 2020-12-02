@@ -41,7 +41,6 @@ import { fetchContacts, setUser} from "../actions/contactActions";
                 <h3>Last Name: {contact.last_name}</h3>
                 <h3>Email Address: {contact.email_address}</h3>
                 <h3>Contact Number: {contact.phone_number}</h3>
-                
                 <br/>
                 
             </div>

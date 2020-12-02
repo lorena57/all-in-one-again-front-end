@@ -75,6 +75,7 @@ const CardSection = () => {
 
 </Link>
 
+    <Link to="/notes/new">
             <Card className={classes.root}>
                 <CardActionArea>
                     <CardMedia
@@ -95,6 +96,7 @@ const CardSection = () => {
                     </CardContent>
                 </CardActionArea>
             </Card>
+            </Link>
 
             <Card className={classes.root}>
                 <CardActionArea>
