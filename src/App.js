@@ -3,7 +3,7 @@ import Nav from './components/Nav';
 import Contacts from "./containers/Contacts";
 import ContactForm from "./components/ContactForm";
 
-import IntroPage from './components/HomePage';
+import HomePage from './components/HomePage';
 import { Route, Switch } from 'react-router-dom';
 
 
@@ -14,7 +14,7 @@ class App extends Component {
       <div>
         <Nav />
         <Switch>
-          <Route exact path='/' component={IntroPage} />
+          <Route exact path='/' component={HomePage} />
           <Route path='/contacts/new' component={ContactForm} />
           <Route path='/contacts' component={Contacts} />
        
