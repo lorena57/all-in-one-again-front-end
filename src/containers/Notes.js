@@ -18,17 +18,18 @@ class Notes extends Component {
 
         return (
             <div>
-                <section>
+                <div>
                     {
                         this.props.notes.map((note) => {
                             return (
                                 <Note key={note.id}
-                                note={note}
+                                    note={note}
+                                  
                                 />
                             );
                         })
                     }   
-                </section>
+                </div>
             </div>
         )
         // const noteItems = this.props.notes.map(note => (
