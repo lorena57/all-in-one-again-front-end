@@ -3,7 +3,7 @@ import Nav from './components/Nav';
 import Contacts from "./components/Contacts";
 import ContactForm from "./components/ContactForm";
 
-import IntroPage from './containers/IntroPage';
+import IntroPage from './components/IntroPage';
 import { Route, Switch } from 'react-router-dom';
 
 
