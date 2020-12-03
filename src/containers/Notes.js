@@ -1,52 +1,27 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchNotes } from "../actions/noteActions";
-import Note from '../components/Note';
 
 class Notes extends Component {
     componentWillMount(){
         this.props.fetchNotes();
     }
 
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.newNote) {
-            this.props.notes.unshift(nextProps.newNote);
-        }
-    }
-
     render() {
-
+         const noteItems = this.props.notes.map(note => (
+            <div key={note.id}>
+                <h3>Title: {note.title}</h3>
+                <h3>Note: {note.content}</h3>
+                <button>Delete Note</button>
+            </div>
+        ))
         return (
             <div>
-                <div>
-                    {
-                        this.props.notes.map((note) => {
-                            return (
-                                <Note key={note.id}
-                                    note={note}
-                                  
-                                />
-                            );
-                        })
-                    }   
-                </div>
+                <h1>Notes</h1>
+                {noteItems}
+                
             </div>
         )
-        // const noteItems = this.props.notes.map(note => (
-        //     <div key={note.id}>
-        //         <h3>Title: {note.title}</h3>
-        //         <h3>Note: {note.content}</h3>
-        //     </div>
-        // ))
-        // return (
-        //     <div>
-        //         <h1>Notes</h1>
-
-        //         {noteItems}
-        //     </div>
-        // )
-
-
     }
 }
 
@@ -56,4 +31,22 @@ const mapStateToProps = state => ({
     newNote: state.notes.note
 });
 
+
+
+
 export default connect(mapStateToProps, { fetchNotes })(Notes);
+
+// {/* <div>
+//     <div>
+//         {
+//             this.props.notes.map((note) => {
+//                 return (
+//                     <Note key={note.id}
+//                         note={note}
+
+//                     />
+//                 );
+//             })
+//         }
+//     </div>
+// </div> */}

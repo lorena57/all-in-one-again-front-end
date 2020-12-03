@@ -1,4 +1,4 @@
-import { FETCH_NOTES, NEW_NOTES } from '../actions/types';
+import { FETCH_NOTES, NEW_NOTES} from '../actions/types';
 
 const initialState = {
     notes: [],
@@ -19,7 +19,7 @@ const noteReducer = (state = initialState, action) => {
             };
         default:
             return state;
-    }
+    };
 }
 
 export default noteReducer;
