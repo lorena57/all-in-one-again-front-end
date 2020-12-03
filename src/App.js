@@ -8,6 +8,7 @@ import Contacts from "./containers/Contacts";
 import ContactForm from "./components/ContactForm";
 
 
+
 // import NoteUpdate from "./components/NoteUpdate";
 
 
@@ -19,6 +20,8 @@ class App extends Component {
   render() {
     return (
       <div>
+
+      
         <Nav />
         <Switch>
 

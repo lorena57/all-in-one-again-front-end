@@ -32,21 +32,6 @@ const mapStateToProps = state => ({
 });
 
 
-
-
 export default connect(mapStateToProps, { fetchNotes })(Notes);
 
-// {/* <div>
-//     <div>
-//         {
-//             this.props.notes.map((note) => {
-//                 return (
-//                     <Note key={note.id}
-//                         note={note}
 
-//                     />
-//                 );
-//             })
-//         }
-//     </div>
-// </div> */}
