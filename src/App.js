@@ -8,6 +8,10 @@ import Contacts from "./containers/Contacts";
 import ContactForm from "./components/ContactForm";
 
 
+import GroceryIndex from "./components/GroceryIndex";
+
+import GroceryNew from './components/GroceryNew';
+
 
 // import NoteUpdate from "./components/NoteUpdate";
 
@@ -21,7 +25,8 @@ class App extends Component {
     return (
       <div>
 
-      
+        <GroceryIndex />
+   
         <Nav />
         <Switch>
 
@@ -31,6 +36,7 @@ class App extends Component {
           <Route exact path='/' component={HomePage} />
           <Route path='/contacts/new' component={ContactForm} />
           <Route path='/contacts' component={Contacts} />
+          <Route path='/grocery/new' component={GroceryNew} />
           <Route path='/notes' component={Notes} />
           <Route path='/notes/new' component={NoteForm} />
           
