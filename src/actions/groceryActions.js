@@ -1,5 +1,4 @@
-import { FETCH_GROCERIES } from "./types";
-
+import { FETCH_GROCERIES} from './types';
 
 export const fetchGroceries = () => dispatch => {
     fetch('http://localhost:3000/api/v1/groceries')
