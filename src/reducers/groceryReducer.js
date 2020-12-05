@@ -1,6 +1,4 @@
 import { FETCH_GROCERIES } from "../actions/types";
-import _ from 'lodash';
-
 
 const initialState = {
     groceries: [],
