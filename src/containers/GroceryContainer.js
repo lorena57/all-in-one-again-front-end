@@ -3,10 +3,10 @@ import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchGroceries } from "../actions/groceryActions";
 import { Link } from 'react-router-dom'
-import Grocery from './Grocery'
-import Groceries from './Groceries'
+// import Grocery from './Grocery'
+// import Groceries from './Groceries'
 
-class GroceryIndex extends Component {
+class GroceryContainer extends Component {
     componentDidMount() {
         this.props.fetchGroceries();
     }
@@ -31,4 +31,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps, { fetchGroceries })(GroceryIndex);
+export default connect(mapStateToProps, { fetchGroceries })(GroceryContainer);
