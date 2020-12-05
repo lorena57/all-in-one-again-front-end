@@ -1,44 +1,34 @@
-import _ from 'lodash';
 import React, { Component } from 'react'
+import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchGroceries } from "../actions/groceryActions";
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import Grocery from './Grocery'
+import Groceries from './Groceries'
 
 class GroceryIndex extends Component {
     componentDidMount() {
         this.props.fetchGroceries();
     }
-
-    renderGroceries() {
-        return _.map(this.props.groceries, groceries => {
-            return (
-                <li key={groceries.id}>
-                    {groceries.qty}
-                </li>
-            );
-        });
-    }
-
     render() {
-
         return (
             <div>
                 <div>
                     <Link to='/grocery/new'>
-                    Add Grocery
+                        Add Grocery
                     </Link>
                 </div>
-              <h3>POS ISN'T WORKING</h3>
-              <ul>
-                    {this.renderGroceries()}
-              </ul>
+                <Route path='/groceries/:id' render={(routerProps) => <Grocery {...routerProps} groceries={this.props.groceries} />} />
+                <Route exact path='/groceries' render={(routerProps) => <Groceries {...routerProps} groceries={this.props.groceries} />} />
+                {/* <Grocery groceries={this.props.groceries} /> */}
             </div>
         )
     }
 }
-
 function mapStateToProps(state) {
-    return { groceries: state.groceries};
+    return {
+        groceries: state.groceries.groceries
+    };
 }
 
-export default connect(mapStateToProps, { fetchGroceries})(GroceryIndex);
+export default connect(mapStateToProps, { fetchGroceries })(GroceryIndex);
