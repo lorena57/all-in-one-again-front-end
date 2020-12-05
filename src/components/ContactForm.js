@@ -29,6 +29,14 @@ import { createContact } from "../actions/contactActions";
         phone_number: this.state.phone_number
         }
         this.props.createContact(contact)
+
+        ///Check to see if it works
+        this.setState({
+            first_name: '',
+            last_name: '',
+            email_address: '',
+            phone_number: ''
+        })
     }
 
     render() {
