@@ -8,7 +8,7 @@ import Contacts from "./containers/Contacts";
 import ContactForm from "./components/ContactForm";
 
 
-import GroceryIndex from "./containers/GroceryIndex";
+import GroceryContainer from "./containers/GroceryContainer";
 
 
 
@@ -24,7 +24,7 @@ class App extends Component {
     return (
       <div>
 
-        <GroceryIndex />
+        <GroceryContainer />
    
         <Nav />
         <Switch>
