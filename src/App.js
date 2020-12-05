@@ -11,11 +11,6 @@ import ContactForm from "./components/ContactForm";
 import GroceryContainer from "./containers/GroceryContainer";
 
 
-
-// import NoteUpdate from "./components/NoteUpdate";
-
-
-
 import Notes from './containers/Notes';
 import NoteForm from './components/NoteForm'
 
@@ -25,7 +20,7 @@ class App extends Component {
       <div>
 
         <GroceryContainer />
-   
+  
         <Nav />
         <Switch>
 
