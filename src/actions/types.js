@@ -6,6 +6,7 @@ export const NEW_CONTACTS = 'NEW_CONTACTS';
 export const SET_USER = 'SET_USER';
 
 export const FETCH_GROCERIES = 'FETCH_GROCERIES';
+export const DELETE_GROCERY = 'DELETE_GROCERY';
 
 
 

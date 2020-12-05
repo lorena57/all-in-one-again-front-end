@@ -1,4 +1,5 @@
 import { FETCH_GROCERIES, DELETE_GROCERY } from './types';
+
 export const fetchGroceries = () => dispatch => {
     fetch('http://localhost:3000/api/v1/groceries')
         .then(res => res.json())
@@ -8,7 +9,6 @@ export const fetchGroceries = () => dispatch => {
         }));
 }
 export const deleteGrocery = (groceryId) => dispatch => {
-    debugger
     fetch(`http://localhost:3000/api/v1/groceries/${groceryId}`, {
         method: 'DELETE'
     })
