@@ -12,8 +12,8 @@ export const deleteGrocery = (groceryId) => dispatch => {
     fetch(`http://localhost:3000/api/v1/groceries/${groceryId}`, {
         method: 'DELETE'
     })
-        .then(res => res.json())
-        .then(groceries => dispatch({
+        // .then(res => res.json())
+        .then(() => dispatch({
             type: DELETE_GROCERY,
             payload: groceryId
         }));

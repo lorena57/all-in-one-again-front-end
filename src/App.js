@@ -7,9 +7,7 @@ import HomePage from './components/HomePage';
 import Contacts from "./containers/Contacts";
 import ContactForm from "./components/ContactForm";
 
-
 import GroceryContainer from "./containers/GroceryContainer";
-
 
 import Notes from './containers/Notes';
 import NoteForm from './components/NoteForm'
@@ -19,17 +17,19 @@ class App extends Component {
     return (
       <div>
 
-        <GroceryContainer />
+
   
         <Nav />
         <Switch>
 
-          {/* <NoteUpdate/> */}
+         
 
 
           <Route exact path='/' component={HomePage} />
           <Route path='/contacts/new' component={ContactForm} />
           <Route path='/contacts' component={Contacts} />
+
+          <Route path='/groceries' component={GroceryContainer} />
          
           <Route path='/notes' component={Notes} />
           <Route path='/notes/new' component={NoteForm} />

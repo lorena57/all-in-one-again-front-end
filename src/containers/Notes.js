@@ -12,7 +12,6 @@ class Notes extends Component {
             <div key={note.id}>
                 <h3>Title: {note.title}</h3>
                 <h3>Note: {note.content}</h3>
-                <button>Delete Note</button>
             </div>
         ))
         return (

@@ -1,17 +1,13 @@
-import { FETCH_GROCERIES } from "../actions/types";
+import { FETCH_GROCERIES, DELETE_GROCERY } from "../actions/types";
 
-const initialState = {
-    groceries: [],
-    grocery: {}
-}
+const initialState = []
 
 const groceryReducer = (state = initialState, action) => {
     switch (action.type) {
         case FETCH_GROCERIES:
-            return {
-                ...state,
-                groceries: action.payload
-            }
+            return [...state, ...action.payload]
+        case DELETE_GROCERY:
+            return state.filter(grocery => grocery.id !== action.payload)
         default:
             return state;
     }

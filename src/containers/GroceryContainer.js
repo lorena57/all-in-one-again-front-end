@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchGroceries } from "../actions/groceryActions";
 import { Link } from 'react-router-dom';
-import Grocery from '../components/Grocery';
+// import Grocery from '../components/Grocery';
 import Groceries from '../components/Groceries';
 
 
@@ -19,12 +19,12 @@ class GroceryContainer extends Component {
                     <Link to='/grocery/new'>
                         Add Grocery
                     </Link>
-                </div>
-                <Route path='/groceries/:id' render={(routerProps) => <Grocery {...routerProps} groceries={this.props.groceries} />} />
-            
-            {/* render takes in a function */}
-            {/* You then pass it the component */}
-            {/* the function then allows groceries to the props and map/iterate  */}
+                </div>            
+                {/* render takes in a function */}
+                {/* You then pass it the component */}
+                {/* the function then allows groceries to the props and map/iterate  */}
+                {/*  Watch video and 51:58 again */}
+                {/* <Route path='/groceries/:id' render={(routerProps) => <Grocery {...routerProps} groceries={this.props.groceries} />} /> */}
                 <Route exact path='/groceries' render={(routerProps) => <Groceries {...routerProps} groceries={this.props.groceries} />} />
                 {/* <Grocery groceries={this.props.groceries} /> */}
             </div>
@@ -33,7 +33,8 @@ class GroceryContainer extends Component {
 }
 function mapStateToProps(state) {
     return {
-        groceries: state.groceries.groceries
+        // groceries: state.groceryReducer.groceries.groceries
+        groceries: state.groceries
     };
 }
 
