@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchNotes } from "../actions/noteActions";
 
+
+
+
 class Notes extends Component {
     componentWillMount(){
         this.props.fetchNotes();

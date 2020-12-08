@@ -1,12 +1,12 @@
 import React from 'react'
 
 const Grocery = (props) => {
-    // console.log(props.groceries)
+  
 
     // this pulls out the specific item
     let grocery = props.groceries[props.match.params.id - 1]
 
-    console.log(grocery)
+
 
 
 

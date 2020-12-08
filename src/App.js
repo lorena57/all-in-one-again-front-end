@@ -17,12 +17,8 @@ class App extends Component {
     return (
       <div>
 
-
-  
         <Nav />
         <Switch>
-
-         
 
 
           <Route exact path='/' component={HomePage} />
@@ -30,9 +26,9 @@ class App extends Component {
           <Route path='/contacts' component={Contacts} />
 
           <Route path='/groceries' component={GroceryContainer} />
-         
+         <Route path='/notes/new' component={NoteForm} />
           <Route path='/notes' component={Notes} />
-          <Route path='/notes/new' component={NoteForm} />
+          
           
 
        

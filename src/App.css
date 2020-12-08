@@ -1,4 +1,4 @@
-/* .App {
+.App {
   width: 90%;
   margin: auto;
 }
@@ -23,6 +23,18 @@
   font-size: large;
 }
 
+button {
+  padding: 5px 10px;
+  margin: 0 10px;
+  height: 35px;
+  cursor: pointer;
+  color: black;
+  width: 70px;
+  border-radius: 5px;
+}
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -30,4 +42,4 @@
   to {
     transform: rotate(360deg);
   }
-} */
+}
