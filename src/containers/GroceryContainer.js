@@ -6,8 +6,6 @@ import { fetchGroceries } from "../actions/groceryActions";
 // import Grocery from '../components/Grocery';
 import Groceries from '../components/Groceries';
 
-
-
 class GroceryContainer extends Component {
     componentDidMount() {
         this.props.fetchGroceries();

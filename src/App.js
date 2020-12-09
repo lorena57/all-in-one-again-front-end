@@ -19,19 +19,13 @@ class App extends Component {
 
         <Nav />
         <Switch>
-
-
           <Route exact path='/' component={HomePage} />
           <Route path='/contacts/new' component={ContactForm} />
           <Route path='/contacts' component={Contacts} />
 
           <Route path='/groceries' component={GroceryContainer} />
-         <Route path='/notes/new' component={NoteForm} />
+          <Route path='/notes/new' component={NoteForm} />
           <Route path='/notes' component={Notes} />
-          
-          
-
-       
         </Switch>
 
       </div>

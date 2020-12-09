@@ -10,7 +10,6 @@ export const fetchContacts = () => dispatch => {
 }
 
 export const createContact = (contactData) => dispatch => {
-  
     fetch('http://localhost:3000/api/v1/contacts', {
         method: 'POST',
         headers: {

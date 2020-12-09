@@ -25,10 +25,11 @@ const useStyles = makeStyles({
 const Groceries = (props) => {
 
     const classes = useStyles();
+    // const handleDelete = (event, grocery) => {
 
-    const handleDelete = (event, grocery) => {
-        event.stopPropagation()
-        event.preventDefault();
+    const handleDelete = ( grocery) => {
+        // event.stopPropagation()
+        // event.preventDefault();
         props.deleteGrocery(grocery.id)
     }
 
@@ -51,7 +52,8 @@ const Groceries = (props) => {
                             </CardContent>
                             
                             <CardActions>
-                                <Button onClick={(event) => handleDelete(event, grocery)}>Delete</Button>
+                            {/* <Button onClick={(event) => handleDelete(event, grocery)}>Delete</Button> */}
+                                <Button onClick={(event) => handleDelete( grocery)}>Delete</Button>
                             </CardActions>
                         </Card>
                 </div>

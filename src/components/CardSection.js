@@ -7,8 +7,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
 
-
-
 //Icons
 import LocalGroceryStoreIcon from '@material-ui/icons/LocalGroceryStore';
 import NoteIcon from '@material-ui/icons/Note';
@@ -34,8 +32,6 @@ const CardSection = () => {
     return (
         <div className={classes.root} id='card-selection'>
 
-
-
 <Link to="/contacts/new">
             <Card className={classes.root}>
                 <CardActionArea>
@@ -53,7 +49,6 @@ const CardSection = () => {
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
                             Do you need a place to create contacts?
-                            
                         </Typography>
                     </CardContent>
                 </CardActionArea>

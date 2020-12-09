@@ -4,9 +4,6 @@ const initialState = {
     contacts: [],
     contact: {}
 }
-
-// const contactReducer = (state = initialState, action)
-
 const contactReducer = (state = initialState, action) => {
     switch (action.type) {
         case FETCH_CONTACTS:
