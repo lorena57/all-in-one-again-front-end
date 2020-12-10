@@ -9,8 +9,11 @@ import ContactForm from "./components/ContactForm";
 
 import GroceryContainer from "./containers/GroceryContainer";
 
-import Notes from './containers/Notes';
-import NoteForm from './components/NoteForm'
+import NotesContainer from "./containers/NotesContainer";
+
+
+// import Notes from './containers/Notes';
+// import NoteForm from './components/NoteForm'
 
 class App extends Component {
   render() {
@@ -23,9 +26,14 @@ class App extends Component {
           <Route path='/contacts/new' component={ContactForm} />
           <Route path='/contacts' component={Contacts} />
 
+          <Route path='/notes' component={NotesContainer} />
+
           <Route path='/groceries' component={GroceryContainer} />
-          <Route path='/notes/new' component={NoteForm} />
-          <Route path='/notes' component={Notes} />
+          
+
+
+          {/* <Route path='/notes/new' component={NoteForm} />
+          <Route path='/notes' component={Notes} /> */}
         </Switch>
 
       </div>

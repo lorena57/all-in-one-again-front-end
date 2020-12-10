@@ -25,6 +25,7 @@ class GroceryContainer extends Component {
         )
     }
 }
+
 function mapStateToProps(state) {
     return {
         groceries: state.groceries

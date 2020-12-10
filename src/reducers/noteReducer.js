@@ -1,22 +1,13 @@
-import { FETCH_NOTES, NEW_NOTES} from '../actions/types';
+import { FETCH_NOTES } from '../actions/types';
 
-const initialState = {
-    notes: [],
-    note: {},
-}
+const initialState = []
 
 const noteReducer = (state = initialState, action) => {
+    // the (action.type) is the case
     switch (action.type) {
         case FETCH_NOTES:
-            return {
-                ...state,
-                notes: action.payload
-            };
-        case NEW_NOTES:
-            return {
-                ...state,
-                note: action.payload
-            };
+            // return [...state, ...action.payload]
+            return [...action.payload]
         default:
             return state;
     }
@@ -24,3 +15,16 @@ const noteReducer = (state = initialState, action) => {
 
 export default noteReducer;
 
+        // case NEW_NOTES:
+        //     return {
+        //         ...state,
+        //         note: action.payload
+        //     };
+
+
+        // import { FETCH_NOTES, NEW_NOTES } 
+
+// const initialState = {
+//     notes: [],
+//     note: {},
+// }

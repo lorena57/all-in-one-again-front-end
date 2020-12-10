@@ -5,13 +5,15 @@ import rootReducer from "./reducers";
 
 const initialState = {};
 
+// Array of middleware, more can be added
 const middleware = [thunk];
+
 
 const store = createStore(
     rootReducer,
     initialState,
     compose(
-        applyMiddleware(...middleware,),
+        applyMiddleware(...middleware),
         window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     )
 );
