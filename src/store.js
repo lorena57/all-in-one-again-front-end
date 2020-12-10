@@ -8,7 +8,6 @@ const initialState = {};
 // Array of middleware, more can be added
 const middleware = [thunk];
 
-
 const store = createStore(
     rootReducer,
     initialState,

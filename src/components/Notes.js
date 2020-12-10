@@ -1,5 +1,4 @@
 import React from 'react'
-// import { connect } from 'react-redux';
 
 const Notes = (props) => {
  
@@ -18,5 +17,4 @@ const Notes = (props) => {
     )
 }
 
-// export default connect(null, )(Notes);
 export default Notes;
