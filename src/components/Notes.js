@@ -5,7 +5,7 @@ const Notes = (props) => {
  
     return (
         <div>
-            <h1>Groceries</h1>
+            <h1>Notes</h1>
             {props.notes.map((note ,index) =>
                 <div key={index.id}>
               

@@ -26,6 +26,11 @@ class NoteForm extends Component {
         };
 
         this.props.createNote(newNote)
+
+        this.setState({
+            title: '',
+            content: ''
+        })
     }
 
     render() {
