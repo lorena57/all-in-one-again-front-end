@@ -14,17 +14,3 @@ const noteReducer = (state = initialState, action) => {
 }
 
 export default noteReducer;
-
-        // case NEW_NOTES:
-        //     return {
-        //         ...state,
-        //         note: action.payload
-        //     };
-
-
-        // import { FETCH_NOTES, NEW_NOTES } 
-
-// const initialState = {
-//     notes: [],
-//     note: {},
-// }
