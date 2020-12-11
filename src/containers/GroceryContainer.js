@@ -7,6 +7,7 @@ import { fetchGroceries } from "../actions/groceryActions";
 import Groceries from '../components/Groceries';
 
 class GroceryContainer extends Component {
+    // componentDidMount is used for making async requests when the component loads
     componentDidMount() {
         this.props.fetchGroceries();
     }

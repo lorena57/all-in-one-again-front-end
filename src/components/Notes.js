@@ -1,4 +1,5 @@
 import React from 'react'
+import NoteRating from '../reducers/NoteRating'
 
 const Notes = (props) => {
  
@@ -11,6 +12,7 @@ const Notes = (props) => {
                     Title: {note.title}
                     <br/>
                     Note: {note.content}
+                    <NoteRating/>
                 </div>
             )}
         </div>
