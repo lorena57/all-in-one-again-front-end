@@ -41,7 +41,7 @@ import { createContact } from "../actions/contactActions";
 
     render() {
         return (
-            <div>
+            <div className="contact_container">
                 <h1>Add Contact</h1>
                 <form onSubmit={this.onSubmit}>
                     <div>

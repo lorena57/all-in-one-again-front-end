@@ -1,23 +1,21 @@
 import React from 'react'
-import openBook from '../img/open-book.jpg';
+// import openBook from '../img/open-book.jpg';
 
 const IntroPage = () => {
     return (
         <div>
-            <div>
+            <div className="container">
                 <div>
                     <h2>Welcome to</h2>
                 </div>
                 <div>
-                    <h2>All In</h2>
+                    <h2>All In <span className="welcome_message">One</span></h2>
                 </div>
-                <div>
-                    <h2>One</h2>
-                </div>
+          
             </div>
-            <div>
+            {/* <div>
                 <img src={openBook} alt="" />
-            </div>
+            </div> */}
         </div>
     )
 }

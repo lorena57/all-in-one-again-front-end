@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  text-align: center;
+}
+
+.welcome_message {
+  color: #2554c7;
+}
+
+.contact_container {
+  padding: 50px;
+}

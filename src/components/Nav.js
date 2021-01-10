@@ -52,11 +52,11 @@ const StyledNav = styled.nav`
         color: black;
     }
     h1 span {
-        color: black;
+        color: #2554C7;
     };
 h1 span {
     // color: #2673ed;
-    color: black;
+    color: #2554C7;
 }
 
 span {
