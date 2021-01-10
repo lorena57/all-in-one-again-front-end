@@ -38,7 +38,7 @@ import { fetchContacts, setUser} from "../actions/contactActions";
         ))
         return (
             
-            <div>
+            <div className="contact_container">
                 <div >
                     {renderList}
                     <br/>

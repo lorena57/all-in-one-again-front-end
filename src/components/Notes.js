@@ -4,7 +4,7 @@ import NoteRating from '../reducers/NoteRating'
 const Notes = (props) => {
  
     return (
-        <div>
+        <div className="note_container">
             <h1>Notes</h1>
             {props.notes.map((note ,index) =>
                 <div key={index.id}>

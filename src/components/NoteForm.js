@@ -35,7 +35,7 @@ class NoteForm extends Component {
 
     render() {
         return (
-            <div>
+            <div className="note_container">
                 <form onSubmit={this.onSubmit}>
                     <div>
                         <label>Title:</label>

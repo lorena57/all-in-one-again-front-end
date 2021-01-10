@@ -13,7 +13,7 @@ class GroceryContainer extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="grocery_container">
                 <div>
                     {/* <Link to='/grocery/new'>
                         Add Grocery
