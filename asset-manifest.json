@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/all-in-one-again-front-end/static/css/main.3cf6b19a.chunk.css",
+    "main.js": "/all-in-one-again-front-end/static/js/main.265ab8b8.chunk.js",
+    "main.js.map": "/all-in-one-again-front-end/static/js/main.265ab8b8.chunk.js.map",
+    "runtime-main.js": "/all-in-one-again-front-end/static/js/runtime-main.3b3f8447.js",
+    "runtime-main.js.map": "/all-in-one-again-front-end/static/js/runtime-main.3b3f8447.js.map",
+    "static/js/2.804c0ae2.chunk.js": "/all-in-one-again-front-end/static/js/2.804c0ae2.chunk.js",
+    "static/js/2.804c0ae2.chunk.js.map": "/all-in-one-again-front-end/static/js/2.804c0ae2.chunk.js.map",
+    "static/js/3.536bcddb.chunk.js": "/all-in-one-again-front-end/static/js/3.536bcddb.chunk.js",
+    "static/js/3.536bcddb.chunk.js.map": "/all-in-one-again-front-end/static/js/3.536bcddb.chunk.js.map",
+    "index.html": "/all-in-one-again-front-end/index.html",
+    "static/css/main.3cf6b19a.chunk.css.map": "/all-in-one-again-front-end/static/css/main.3cf6b19a.chunk.css.map",
+    "static/js/2.804c0ae2.chunk.js.LICENSE.txt": "/all-in-one-again-front-end/static/js/2.804c0ae2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3b3f8447.js",
+    "static/js/2.804c0ae2.chunk.js",
+    "static/css/main.3cf6b19a.chunk.css",
+    "static/js/main.265ab8b8.chunk.js"
+  ]
+}
