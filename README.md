@@ -3,6 +3,7 @@
 
 Client-side React application utilizing react-redux with use of async actions and redux-thunk middleware.
 
+![](build/assests/AllInOne.png)
 
 ## Available Scripts
 
